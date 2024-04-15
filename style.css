@@ -1,0 +1,232 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #4d4d4d, #333);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    height: 100vh; /* Set container height to full viewport height */
+}
+
+.code-editor, .preview {
+    width: 90%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.button {
+    margin-bottom: 10px;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.button-primary:hover {
+    background-color: #0056b3;
+}
+
+.button-secondary {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.button-secondary:hover {
+    background-color: #e9ecef;
+}
+
+.preview {
+    display: none; /* Hide preview by default */
+    justify-content: center;
+    align-items: center;
+}
+
+.preview-content {
+    border-radius: 20px;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+}
+
+iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 20px;
+}
+
+textarea {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    width: calc(100% - 24px); /* Adjust width for padding */
+    margin-bottom: 20px;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    transition: border-color 0.3s ease;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+textarea:focus {
+    border-color: #007bff;
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1); /* Add custom focus effect */
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    .code-editor, .preview {
+        width: 100%;
+        max-width: 100%;
+    }
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .button {
+        margin: 5px 0;
+    }
+    textarea {
+        width: calc(100% - 24px);
+        margin-bottom: 10px;
+    }
+}
+
+textarea {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    width: calc(100% - 24px); /* Adjust width for padding */
+    margin-bottom: 20px;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    transition: border-color 0.3s ease;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+textarea:focus {
+    border-color: #007bff;
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1); /* Add custom focus effect */
+}
+
+/* Set the size of HTML text area to match CSS and JavaScript text areas */
+#htmlCode,
+#cssCode,
+#jsCode {
+    width: calc(100% - 24px);
+}
+
+/* Base button styles */
+.button {
+    margin-bottom: 10px;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    animation: shine 1s infinite alternate; /* Shine animation */
+}
+
+/* Primary button styles */
+.button-primary {
+    background-color: #007bff; /* Matching color */
+    color: #fff;
+}
+
+/* Secondary button styles */
+.button-secondary {
+    background-color: #f8f9fa; /* Matching color */
+    color: #333;
+}
+
+/* Keyframes for the shine animation */
+@keyframes shine {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.4); /* Initial shadow */
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(0, 123, 255, 0.8); /* Final shadow */
+    }
+}
+
+textarea {
+    border: 1px solid #fff; /* Shining white border */
+    border-radius: 8px;
+    padding: 12px;
+    width: calc(100% - 24px); /* Adjust width for padding */
+    margin-bottom: 20px;
+    font-size: 16px;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    transition: border-color 0.3s ease;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* Different text colors for HTML, CSS, and JavaScript text areas */
+#htmlCode {
+    color: #ff6d00; /* Orange text color for HTML */
+}
+
+#cssCode {
+    color: #00bfff; /* Light blue text color for CSS */
+}
+
+#jsCode {
+    color: #00ff00; /* Green text color for JavaScript */
+}
+
+.preview {
+    display: none; /* Hide preview by default */
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Black background */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 20px 40px rgba(255, 255, 255, 0.3); /* White shadow */
+}
+
+.preview-content {
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5); /* White shadow */
+}
+
+iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 20px;
+}
+
+/* Text color for preview title */
+.preview h2 {
+    color: #fff; /* White text color */
+}

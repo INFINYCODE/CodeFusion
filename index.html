@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - bruh</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Building Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="code-editor">
+            <h2>Code Editor</h2>
+            <div class="code-section">
+                <textarea id="htmlCode" placeholder="Enter HTML code here"></textarea>
+                <textarea id="cssCode" placeholder="Enter CSS code here"></textarea>
+                <textarea id="jsCode" placeholder="Enter JavaScript code here"></textarea>
+            </div>
+            <div class="buttons">
+                <button onclick="runCode()" class="button button-primary">Run</button>
+                <button onclick="exportCode()" class="button button-secondary export-button">Export</button>
+                <button onclick="togglePreview()" class="button button-secondary preview-button">Preview</button>
+            </div>
+        </div>
+        <div class="preview">
+            <h2>Preview</h2>
+            <div class="preview-content">
+                <iframe id="previewFrame"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
